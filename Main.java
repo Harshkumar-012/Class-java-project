@@ -100,9 +100,9 @@ public class Main {
             System.out.println("Enter Fat Target : ");
             double fa = sc.nextDouble();
 
-            if(cal>0 && pro>0 && car>0 && fa>0){
+            if(cal>=0 && pro>=0 && car>=0 && fa>=0){
                 totalCaloriesTarget = cal;
-                totalCarbsTarget = pro;
+                totalProteinTarget = pro;
                 totalCarbsTarget = car;
                 totalFatTarget = fa;
 
@@ -152,6 +152,10 @@ public class Main {
                         break;
 
                     case 5:
+                        compareValue("Calories",totalCaloriesTarget,totalCalories);
+                        compareValue("Protein",totalProteinTarget,totalProtein);
+                        compareValue("Carbs",totalCarbsTarget,totalCarbs);
+                        compareValue("Fat",totalFatTarget,totalFat);
                         System.out.println("Thank You");    
                         break;
                 
@@ -160,6 +164,6 @@ public class Main {
                         break;
                 }
             }
-            while(choice!=5);
+            while(choice!=6);
         }
 }
